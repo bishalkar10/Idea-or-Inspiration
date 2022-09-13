@@ -36,13 +36,10 @@ class Railway ():
         print ("**********")
 
 t  = int(input("How many tickets ? "))
-
+b_station = input ("Enter Boarding Station Name :")
+d_station = input("Enter Destination Station Name :")
 for x in range (t):
-       
-# Taking input about passenger info....        
     name = input ("Enter Passenger's name :")
-    b_station = input ("Enter Boarding Station Name :")
-    d_station = input("Enter Destination Station Name :")
     ticket_no = random.randint(10000,100000) 
 # using random module to creat random module number
     price = 100
@@ -53,4 +50,4 @@ for x in range (t):
     p1.print_info()
 
 bill = price*t
-print ("Total Amount Payable is " + bill + " Rs.")
+print ("Total Amount Payable is", bill, "Rs.")
