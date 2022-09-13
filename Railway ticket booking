@@ -27,26 +27,30 @@ class Railway ():
 #Output Passenger Info
 
     def print_info(self):
-        print ()
-        print ("**********")
+        
+        print ()        
         print ("Passenger Name is", self.name)
         print ("Journey from", self.b_station,"to", self.d_station)
         print ("Ticket no. is", self.ticket_no)
-        print ("Ticket Price is", self.price)
-        print ()
-        
+        print ("Ticket Price is", self.price, "Rs.")
+        print ("**********")
+
+t  = int(input("How many tickets ? "))
+
+for x in range (t):
+       
 # Taking input about passenger info....        
-name = input ("Enter Passenger's name :")
-b_station = input ("Enter Boarding Station Name :")
-d_station = input("Enter Destination Station Name :")
-ticket_no = random.randint(10000,100000) 
+    name = input ("Enter Passenger's name :")
+    b_station = input ("Enter Boarding Station Name :")
+    d_station = input("Enter Destination Station Name :")
+    ticket_no = random.randint(10000,100000) 
 # using random module to creat random module number
-price = int (input("Enter Price : "))
+    price = 100
 #Declaring instance....
 
-p1 = Railway(name, ticket_no, price, b_station, d_station)
-p1.book_ticket()
-p1.book_ticket()
-p1.book_ticket()
-p1.book_ticket()
-p1.print_info()
+    p1 = Railway(name, ticket_no, price, b_station, d_station)
+    p1.book_ticket()
+    p1.print_info()
+
+bill = price*t
+print ("Total Amount Payable is " + bill + " Rs.")
