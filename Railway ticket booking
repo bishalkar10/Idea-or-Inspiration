@@ -1,0 +1,52 @@
+import random # import random module to generate random ticket no.
+
+
+class Railway ():
+    total_seat = []
+    for i in range (1,301) :
+        total_seat.append(i)
+#initiating Passenger Info    
+    def __init__(self,name, ticket_no, price,b_station_name, d_station_name):
+        self.name = name    # person name
+        self.ticket_no = ticket_no 
+        self.price = 100
+        self.b_station = b_station # boarding station name
+        self.d_station = d_station # destination station name 
+    
+#Initiating book_ticket function 
+    def book_ticket (self):
+        
+        if len (self.total_seat) >0:
+            seat = self.total_seat[0]
+            del self.total_seat[0]
+            print (f"Your Seat number is {seat}")
+        else :              
+            print ("Sorry! No seat is Available Now!") 
+    
+                
+#Output Passenger Info
+
+    def print_info(self):
+        print ()
+        print ("**********")
+        print ("Passenger Name is", self.name)
+        print ("Journey from", self.b_station,"to", self.d_station)
+        print ("Ticket no. is", self.ticket_no)
+        print ("Ticket Price is", self.price)
+        print ()
+        
+# Taking input about passenger info....        
+name = input ("Enter Passenger's name :")
+b_station = input ("Enter Boarding Station Name :")
+d_station = input("Enter Destination Station Name :")
+ticket_no = random.randint(10000,100000) 
+# using random module to creat random module number
+price = int (input("Enter Price : "))
+#Declaring instance....
+
+p1 = Railway(name, ticket_no, price, b_station, d_station)
+p1.book_ticket()
+p1.book_ticket()
+p1.book_ticket()
+p1.book_ticket()
+p1.print_info()
