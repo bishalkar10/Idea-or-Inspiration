@@ -2,24 +2,26 @@
 
 class Solution:
     def jumpingNums(self, X):
-        self.X = X
-        mark = 0
+        self.X = X     # initiating X
+        mark = 0      # mark varible for later use
         for num in reversed (range (self.X+1)): #reversed range for loop 
             
             #converting num to string and 
-            #then appending digits in string 
-            
+            #then appending digits in string           
             num_array = [int(digit) for digit in str(num)]
             for i in range (len(num_array)-1):  # if it's 3 digit number then range will be 2
                                                 # so we won't be out list index range 
-                if abs (num_array[i+1] - num_array[i]) == 1 : # if its like (8-9) or (8-9)
+                difference = abs (num_array[i+1] - num_array[i])
+                if difference == 1 : # if its like (8-9) or (9-8)
                     mark += 1               # mark this 
-                    if mark == len(num_array)-1:
+                    if mark == len(num_array)-1: # if it's a 3 digit number then
+                                                 # mark should 3-1 = 2
                         return num
 
-                else :
-                    mark = 0
-                    break 
+                else :       # suppose its 477 then difference would be (7-7) = 0  
+                    mark = 0 # as mark is global variables so, we are resetting it to 0
+                             # so it won't cause any problem
+                    break    # we simply break the loop then
             
 #{ 
  # Driver Code Starts
