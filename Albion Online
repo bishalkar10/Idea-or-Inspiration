@@ -1,0 +1,50 @@
+''' 
+1 Brawl Glove : 12 x Broze Bar (Level 3 )
+                20 x Leather   (Level 3) 
+1 Bronze Bar  : 2 x Tin Ore (Level 3) 
+                1 Copper Ore 
+1 Leather (Level 3) : 2 x Thin Hide (Level 3) 
+                      1 x Leather (Level 2) 
+
+
+'''
+import math
+
+def Bronze_Bar_3(x) : 
+
+    tin_ore_3 = 2 * x 
+    copper_ore_2 = 1 * x
+    print (f'\'{tin_ore_3}\' Tin ore level 3',
+          'and \'{copper_ore_2}\' Copper Ore Level 2 required.')
+    
+    pass
+
+def Leather_3(x) : 
+    
+    thin_hide_3 = 2 * x
+    leather_2 = 1 * x
+
+    frog = math.ceil(thin_hide_3 / 9)
+    snake = math.ceil(leather_2 / 9)
+    
+    print (f'\'{thin_hide_3}\' Thin hide level 3',
+            'and {leather_2} Leather level 2 required.')
+    print (f'You have to kill {frog} Frogs.')
+    print (f'You have to kill {snake} Snakes.')
+    pass
+
+def Brawl_Glove_3 (x) : 
+
+    bronze_bar = x * 12 
+    leather_3 = x * 20
+    
+    Bronze_Bar_3(bronze_bar)
+    Leather_3(leather_3) 
+    
+    pass 
+
+required_glove = 50 - int(input("How many gloves do you have ? "))        
+
+Brawl_Glove_3(required_glove)
+    
+    
