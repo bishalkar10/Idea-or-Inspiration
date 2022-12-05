@@ -13,13 +13,16 @@
 import math      # importing math module
 
 def Bronze_Bar_3(x) : # defining Bronze_Bar Level 3 function 
-
-    tin_ore_3 = 2 * x  # required tin ore level 3
-    copper_ore_2 = 1 * x # required copper ore level 2 
+    
+ # required tin ore level 3
+    tin_ore_3 = 2 * x 
+ # required copper ore level 2 
+    copper_ore_2 = 1 * x  
+ 
     print (f'\'{tin_ore_3}\' Tin ore level 3',
           'and \'{copper_ore_2}\' Copper Ore Level 2 required.')
     
-    pass
+    
 
 def Leather_3(x) : # defining Leather Level 3 function 
     
@@ -38,7 +41,7 @@ def Leather_3(x) : # defining Leather Level 3 function
     print (f'You have to kill {frog} Frogs.')
     print (f'You have to kill {snake} Snakes.')
     
-pass
+
 
 def Brawl_Glove_3 (x) : # This is our final function where 
                         # passing an argument will provide
@@ -52,7 +55,7 @@ def Brawl_Glove_3 (x) : # This is our final function where
     
     pass 
 
-required_glove = 50 # how many gloves are required?
+required_glove = int (input ("How many gloves are required? "))
 gloves_stored = int(input("How many gloves do you have ? "))        
 
 Brawl_Glove_3(required_glove-gloves_stored)
